@@ -9,5 +9,9 @@ Token-based user verification for secure API access. One-time token validity to 
 ### 🔍 Advanced Search and Filters 
 Search for books by genre, author, availability, or publication date.
 ### 📖 Comprehensive CRUD Operations
-Add, update, delete, and view book records with search by title, author, or ISBN.
+Add, update, delete, and view book records with search by title, author, or unique id.
 
+## 🚀 Endpoints: User side
+### Endpoint: users/register
+### Method: POST
+ 
