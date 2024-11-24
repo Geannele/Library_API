@@ -12,6 +12,6 @@ Search for books by genre, author, availability, or publication date.
 Add, update, delete, and view book records with search by title, author, or unique id.
 
 ## 🚀 Endpoints: User side
-### Endpoint: users/register
+### **Endpoint:** users/register
 ### Method: POST
  
