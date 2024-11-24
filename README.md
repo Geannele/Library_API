@@ -11,7 +11,12 @@ Search for books by genre, author, availability, or publication date.
 ### 📖 Comprehensive CRUD Operations
 Add, update, delete, and view book records with search by title, author, or unique id.
 
-## 🚀 Endpoints: User side
-### **Endpoint:** users/register
-### Method: POST
+## Endpoints🚀 
+### User Endpoints 👤
+POST users/register. Register a new user.
+POST users/login. Login and obtain JWT token
+GET /users/displayAll. View all users in the system.
+
+### Book Endpoints
+
  
