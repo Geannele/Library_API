@@ -15,11 +15,11 @@ The Library Management System API is built using the SLIM Framework to create li
 
 ### User Endpoints 👤
 
-###Register a new user
+### Register a new user
 - **Method:** `POST ` 
 - **Endpoint:** `/users/register`  
 
-**Payload:**
+- **Payload:**
 ```json
 {
     "email": "gean@gmail.com",
@@ -27,43 +27,43 @@ The Library Management System API is built using the SLIM Framework to create li
     "password": "gean1234"
 }
 ```
-**Response:**
+- **Response:**
 ```json
 {
     "status": "success",
     "data": null
 }
 ```
-Login and obtain JWT token
+### Login and obtain JWT token
 
-**Method:** `POST`
-**Endpoint:** `/users/login`
+- **Method:** `POST`
+- **Endpoint:** `/users/login`
 
-**Payload:**
+- **Payload:**
 ```json
 {
     "email": "gean@gmail.com",
     "password": "gean1234"
 }
 ```
-**Response:**
+- **Response:**
 ```json
 {
     "status": "success",
     "token": "your_jwt_token"
 }
 ```
-View all users in the system
-**Method:** GET
-**Endpoint:** /users/displayAll
+### View all users in the system
+- **Method:** `GET`
+- **Endpoint:** `/users/displayAll`
 
-**Payload:**
+- **Payload:**
 ```json
 {
     "token": "your_jwt_token"
 }
 ```
-Response:
+- **Response:**
 ```json
 {
     "status": "success",
@@ -78,28 +78,33 @@ Response:
 }
 ```
 ### Book Endpoints 📚
-Add a new book
-Method: POST
-Endpoint: /books/add
-Payload:
+
+### Add a new book
+- **Method:** `POST`
+- **Endpoint:** `/books/add`
+
+- **Payload:**
+```json
 {
       "author": "author_name",
     "title": "book_title",
     "genre": "book_genre",
     "token": "your_jwt_token"
 }
-
-**Response:**
+```
+- **Response:**
+```json
 {
     "status": "success",
     "new_token": "new_jwt_token"
 }
+```
+### Update an existing book
+**Method:** `PUT`
+**Endpoint:** `/books/update`
 
-
-Update an existing book
-Method: PUT
-Endpoint: /books/update
-Payload:
+**Payload:**
+```json
 {
     "author": "author_name",
     "title": "book_title",
@@ -107,13 +112,14 @@ Payload:
     "bookCode": "book_code",
     "token": "your_jwt_token"
 }
-
-**Response:**
+```
+- **Response:**
+``` json
 {
     "status": "success",
     "new_token": "new_jwt_token"
 }
-
+```
 Delete a book by bookCode
 Method: DELETE
 Endpoint: /books/delete
