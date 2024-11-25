@@ -13,10 +13,21 @@ Add, update, delete, and view book records with search by title, author, or uniq
 
 ## Endpoints🚀 
 ### User Endpoints 👤
-POST users/register. Register a new user.
+**Method:** POST 
+**Endpoint:** users/register. 
+Register a new user.
+**Payload: **
+
 POST users/login. Login and obtain JWT token
 GET /users/displayAll. View all users in the system.
 
-### Book Endpoints
+### Book Endpoints 📚
+POST /books/add: Add a new book.
+PUT /books/update: Update an existing book.
+DELETE /books/delete: Delete a book by ID.
+GET /books/displayAll: Retrieve all books in the library. 
+GET /books/displayauthorsbooks: Display all books by a specific author (pass author ID).
+GET /books/displaytitlebooks: Search books by title.
+GET /books/displaygenrebooks: Search books by genre.
 
  
