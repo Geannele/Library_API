@@ -9,14 +9,16 @@ The Library Management System API is built using the SLIM Framework to create li
 ### 🔍 Advanced Search and Filters 
 - Search for books by genre, author, availability, or publication date.
 ### 📖 Comprehensive CRUD Operations
-- Add, update, delete, and view book records with search by title, author, or unique id.
+- Add, update, delete, and view book records with search by title, author, or unique ID.
 
-## Endpoints🚀 
+## Endpoints🚀
+
 ### User Endpoints 👤
-**Method:** POST 
-**Endpoint:** users/register
-Register a new user.
+Register a new user
+**Method:** POST  
+**Endpoint:** `/users/register`  
 **Payload:**
+```json
 {
     "email": "gean@gmail.com",
     "username": "Geannele",
@@ -29,10 +31,10 @@ Register a new user.
     "data": null
 }
 
-**Method:** POST 
-**Endpoint:** users/login
 Login and obtain JWT token
-**Payload:**
+Method: POST 
+Endpoint: users/login
+Payload:
 {
     "email": "gean@gmail.com",
     "password": "gean1234"
@@ -41,190 +43,211 @@ Login and obtain JWT token
 **Response:**
 {
     "status": "success",
-    "token": ""
+    "token": "your_jwt_token"
 }
 
-**Method:** GET
-**Endpoint:** users/displayAll
-View all users in the system.
-**Payload:**
+View all users in the system
+Method: GET
+Endpoint: /users/displayAll
+Payload:
 {
-    "token": ""
+    "token": "your_jwt_token"
 }
 
-**Response:**
+Response:
 {
     "status": "success",
-    "new_token": ""
+    "new_token": "new_jwt_token",
     "data": [
         {
-           "userid" "",
-           "email": "",
-           "username": "",
+           "userid": "1",
+           "email": "gean@gmail.com",
+           "username": "Geannele"
         }
     ]
 }
 
 ### Book Endpoints 📚
-**Method:** POST 
-**Endpoint:** books/add
-Add a new book.
-**Payload:**
+Add a new book
+Method: POST
+Endpoint: /books/add
+Payload:
 {
-    "author": "authors_name",
+      "author": "author_name",
     "title": "book_title",
     "genre": "book_genre",
-    "token": ""
-}
-
-**Response:**
-{
-    "status": "succcess",
-    "new_token": ""
-}
-
-**Method:** PUT 
-**Endpoint:** books/update
-Update an existing book.
-**Payload:**
-{
-    "author": "authors_name",
-    "title": "book_title",
-    "genre": "book_genre",
-    "bookCode" "bookCode"
-    "token": ""
+    "token": "your_jwt_token"
 }
 
 **Response:**
 {
     "status": "success",
-    "new_token": ""
+    "new_token": "new_jwt_token"
 }
 
-**Method:** DELETE 
-**Endpoint:** books/delete
-Delete a book by bookCode.
-**Payload:**
+
+Update an existing book
+Method: PUT
+Endpoint: /books/update
+Payload:
+{
+    "author": "author_name",
+    "title": "book_title",
+    "genre": "book_genre",
+    "bookCode": "book_code",
+    "token": "your_jwt_token"
+}
+
+**Response:**
+{
+    "status": "success",
+    "new_token": "new_jwt_token"
+}
+
+Delete a book by bookCode
+Method: DELETE
+Endpoint: /books/delete
+Payload:
 {
     "bookCode": "bookCode",
-    "token": ""
+    "token": "your_jwt_token"
 }
 
 **Response:** 
 {
     "status": "success",
-    "new_token": ""
+    "new_token": "new_jwt_token"
 }
 
-**Method:** GET
-**Endpoint:** books/displayAll
-Display all books by a specific author  
-**Payload:**
+Display all books by a specific author
+Method: GET
+Endpoint: /books/displayAll
+Payload:
 {
-    "token": ""
+    "token": "yout_jwt_token"
 }
 **Response:**
 {
     "status": "success",
-    "new token": ""
+    "new_token": "new_jwt_token",
     "data": [
         {
-           "bookid": "",
-           "title": "",
-           "genre": "",
-           "bookCode": "",
-           "authorid": "",
-           "authorname": ""
+           "bookid": "1",
+           "title": "book_title",
+           "genre": "book_genre",
+           "bookCode": "book_code",
+           "authorid": "1",
+           "authorname": "author_name"
         }
     ]
 }
 
-**Method:** GET
-**Endpoint:** /books/displayauthorsbooks
-Display all authors by a specific books
-**Payload:**
+Display all books by a specific author
+Method: GET
+Endpoint: /books/displayauthorsbooks
+Payload:
 {
-    "token": "",
+    "token": "your_jwt_token",
     "authorname": "author_name"
 }
+
 **Response:**
 {
     "status": "success",
-    "new_token":
+    "new_token": "new_jwt_token",
     "data": [
       {
-        "bookid": "book_ID",
+        "bookid": "book_id",
         "title": "book_title",
         "genre": "book_genre",
-        "bookCode": "bookCode",
+        "bookCode": "book_code",
         "authorid": "author_id",
         "authorname": "author_name"
       }
    ]
 }
 
-**Method:** GET
-**Endpoint:** /books/displaytitlebooks
-Search books by title.
-**Payload:**
+
+Response:
+
+json
+Copy code
 {
-    "token": "",
+    "status": "success",
+    "new_token": "new_jwt_token",
+    "data": [
+      {
+        "bookid": "book_id",
+        "title": "book_title",
+        "genre": "book_genre",
+        "bookCode": "book_code",
+        "authorid": "author_id",
+        "authorname": "author_name"
+      }
+   ]
+}
+
+Search books by title
+Method: GET
+Endpoint: /books/displaytitlebooks
+Payload:
+{
+    "token": "your_jwt_token",
     "booktitle": "book_title"
 }
 **Response:**
 {
-    
-  "status": "success",
-  "new_token": "",
-  "data": [
-    {
-      "bookid": ,
-      "title": "",
-      "genre": "",
-      "bookCode": "",
-      "authorid": ,
-      "authorname": ""
-    }
-  ]
+    "status": "success",
+    "new_token": "new_jwt_token",
+    "data": [
+        {
+            "bookid": "1",
+            "title": "book_title",
+            "genre": "book_genre",
+            "bookCode": "book_code",
+            "authorid": "1",
+            "authorname": "author_name"
+        }
+    ]
 }
 
-**Method:** GET
-**Endpoint:** books/displaygenrebooks
-Search books by genre.
-**Payload:**
+Search books by genre
+Method: GET
+Endpoint: /books/displaygenrebooks
+Payload:
 {
-    "token": "",
+    "token": "your_jwt_token",
     "bookgenre": "book_genre"
 }
 **Response:**
 {
     "status": "success",
-  "new_token": "",
-  "data": [
-    {
-      "bookid": ,
-      "title": "",
-      "genre": "",
-      "bookCode": "",
-      "authorid": ,
-      "authorname": ""
-    }
-  ]
+    "new_token": "new_jwt_token",
+    "data": [
+        {
+            "bookid": "1",
+            "title": "book_title",
+            "genre": "book_genre",
+            "bookCode": "book_code",
+            "authorid": "1",
+            "authorname": "author_name"
+        }
+    ]
 }
 
 ### Author Endpoints ✍️
-**Method:** POST
-**Endpoint:** /authors/add
-Add a new author.
-**Payload:**
+Add a new author
+Method: POST
+Endpoint: /authors/add
+Payload:
 {
     "authorname": "author_name",
-    "token": ""
+    "token": "your_jwt_token"
 }
 **Response:**
 {
     "status": "success",
-    "new_token": ""
+    "new_token": "new_jwt_token"
 }
 
 **Method:** PUT
@@ -234,12 +257,12 @@ Update author information.
 {
     "authorid": "author_id",
     "authorname": "author_name",
-    "token": ""
+    "token": "your_jwt_token"
 }
 **Response:**
 {
     "status": "success",
-    "new_token": ""
+    "new_token": "new_jwt_token"
 }
 
 **Method:** DELETE
@@ -248,12 +271,12 @@ Delete an author by ID.
 **Payload:**
 {
     "authorid": "author_name",
-    "token": ""
+    "token": "new_jwt_token"
 }
 **Response:**
 {
     "status": "success",
-    "new_token": ""
+    "new_token": "new_jwt_token"
 }
 
 **Method:** GET
@@ -261,20 +284,20 @@ Delete an author by ID.
 View all authors.
 **Payload:**
 {
-    "token": ""
+    "token": "your_jwt_token"
 }
 **Response:**
 {
-    
-  "status": "success",
-  "new_token": ""
-  "data": [
-    {
-      "authorid": ,
-      "authorname": ""
-    }
-  ]
+    "status": "success",
+    "new_token": "new_jwt_token",
+    "data": [
+        {
+            "authorid": "1",
+            "authorname": "author_name"
+        }
+    ]
 }
+
 
 
 
