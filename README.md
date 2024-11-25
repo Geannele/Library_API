@@ -16,7 +16,7 @@ The Library Management System API is built using the SLIM Framework to create li
 ### User Endpoints 👤
 
 Register a new user
-**Method:** POST  
+**Method:** `POST ` 
 **Endpoint:** `/users/register`  
 
 **Payload:**
@@ -35,8 +35,9 @@ Register a new user
 }
 ```
 Login and obtain JWT token
-**Method:** POST 
-**Endpoint:** /users/login
+
+**Method:** `POST`
+**Endpoint:** `/users/login`
 
 **Payload:**
 ```json
