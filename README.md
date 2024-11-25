@@ -12,9 +12,9 @@ The Library Management System API is built using the SLIM Framework to create li
 - Add, update, delete, and view book records with search by title, author, or unique ID.
 
 ## Endpoints🚀
-
+----------------------------------------------------------------------------------------------------------
 ### User Endpoints 👤
-
+----------------------------------------------------------------------------------------------------------
 ### Register a new user
 - **Method:** `POST ` 
 - **Endpoint:** `/users/register`  
@@ -34,6 +34,7 @@ The Library Management System API is built using the SLIM Framework to create li
     "data": null
 }
 ```
+----------------------------------------------------------------------------------------------------------
 ### Login and obtain JWT token
 - **Method:** `POST`
 - **Endpoint:** `/users/login`
@@ -52,6 +53,7 @@ The Library Management System API is built using the SLIM Framework to create li
     "token": "your_jwt_token"
 }
 ```
+----------------------------------------------------------------------------------------------------------
 ### View all users in the system
 - **Method:** `GET`
 - **Endpoint:** `/users/displayAll`
@@ -76,6 +78,7 @@ The Library Management System API is built using the SLIM Framework to create li
     ]
 }
 ```
+----------------------------------------------------------------------------------------------------------
 ### Book Endpoints 📚
 
 ### Add a new book
@@ -98,6 +101,7 @@ The Library Management System API is built using the SLIM Framework to create li
     "new_token": "new_jwt_token"
 }
 ```
+----------------------------------------------------------------------------------------------------------
 ### Update an existing book
 - **Method:** `PUT`
 - **Endpoint:** `/books/update`
@@ -119,6 +123,7 @@ The Library Management System API is built using the SLIM Framework to create li
     "new_token": "new_jwt_token"
 }
 ```
+----------------------------------------------------------------------------------------------------------
 ### Delete a book by bookCode
 - **Method:** `DELETE`
 - **Endpoint:** `/books/delete`
@@ -136,6 +141,7 @@ The Library Management System API is built using the SLIM Framework to create li
     "new_token": "new_jwt_token"
 }
 ```
+----------------------------------------------------------------------------------------------------------
 ### Display all books by a specific author
 - **Method:** `GET`
 - **Endpoint:** `/books/displayAll`
@@ -163,6 +169,7 @@ The Library Management System API is built using the SLIM Framework to create li
     ]
 }
 ```
+----------------------------------------------------------------------------------------------------------
 ### Display all books by a specific author
 - **Method:** `GET`
 - **Endpoint:** `/books/displayauthorsbooks`
@@ -174,7 +181,7 @@ The Library Management System API is built using the SLIM Framework to create li
     "authorname": "author_name"
 }
 ```
-**Response:**
+- **Response:**
 ```
 {
     "status": "success",
@@ -191,19 +198,19 @@ The Library Management System API is built using the SLIM Framework to create li
    ]
 }
 ```
-
+----------------------------------------------------------------------------------------------------------
 ### Search books by title
-**Method:** `GET`
-**Endpoint:** `/books/displaytitlebooks`
+- **Method:** `GET`
+- **Endpoint:** `/books/displaytitlebooks`
 
-**Payload:**
+- **Payload:**
 ```
 {
     "token": "your_jwt_token",
     "booktitle": "book_title"
 }
 ```
-**Response:**
+- **Response:**
 ```
 {
     "status": "success",
@@ -220,18 +227,19 @@ The Library Management System API is built using the SLIM Framework to create li
     ]
 }
 ```
+----------------------------------------------------------------------------------------------------------
 ### Search books by genre
-**Method:** `GET`
-**Endpoint:** `/books/displaygenrebooks`
+- **Method:** `GET`
+- **Endpoint:** `/books/displaygenrebooks`
 
-**Payload:**
+- **Payload:**
 ```
 {
     "token": "your_jwt_token",
     "bookgenre": "book_genre"
 }
 ```
-**Response:**
+- **Response:**
 ```
 {
     "status": "success",
@@ -248,30 +256,33 @@ The Library Management System API is built using the SLIM Framework to create li
     ]
 }
 ```
+----------------------------------------------------------------------------------------------------------
 ### Author Endpoints ✍️
-### Add a new author
-**Method:** `POST`
-**Endpoint:** `/authors/add`
 
-**Payload:**
+### Add a new author
+- **Method:** `POST`
+- **Endpoint:** `/authors/add`
+
+- **Payload:**
 ```
 {
     "authorname": "author_name",
     "token": "your_jwt_token"
 }
 ```
-**Response:**
+- **Response:**
 ```
 {
     "status": "success",
     "new_token": "new_jwt_token"
 }
 ```
+----------------------------------------------------------------------------------------------------------
 ### Update author information.
-**Method:** PUT
-**Endpoint:** /authors/update
+- **Method:** PUT
+- **Endpoint:** /authors/update
 
-**Payload:**
+- **Payload:**
 ```
 {
     "authorid": "author_id",
@@ -279,42 +290,44 @@ The Library Management System API is built using the SLIM Framework to create li
     "token": "your_jwt_token"
 }
 ```
-**Response:**
+- **Response:**
 ```
 {
     "status": "success",
     "new_token": "new_jwt_token"
 }
 ```
+----------------------------------------------------------------------------------------------------------
 ### Delete an author by ID.
-**Method:** DELETE
-**Endpoint:** /authors/delete
+- **Method:** `DELETE`
+- **Endpoint:** `/authors/delete`
 
-**Payload:**
+- **Payload:**
 ```
 {
     "authorid": "author_name",
     "token": "new_jwt_token"
 }
 ```
-**Response:**
+- **Response:**
 ```
 {
     "status": "success",
     "new_token": "new_jwt_token"
 }
 ```
-View all authors.
-**Method:** GET
-**Endpoint:** /authors/display
+----------------------------------------------------------------------------------------------------------
+### View all authors.
+- **Method:** `GET`
+- **Endpoint:** `/authors/display`
 
-**Payload:**
+- **Payload:**
 ```
 {
     "token": "your_jwt_token"
 }
 ```
-**Response:**
+- **Response:**
 ```
 {
     "status": "success",
