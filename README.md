@@ -18,44 +18,52 @@ The Library Management System API is built using the SLIM Framework to create li
 Register a new user
 **Method:** POST  
 **Endpoint:** `/users/register`  
-**Payload:**
 
+**Payload:**
+```json
 {
     "email": "gean@gmail.com",
     "username": "Geannele",
     "password": "gean1234"
 }
-
+```
 **Response:**
+```json
 {
     "status": "success",
     "data": null
 }
-
+```
 Login and obtain JWT token
-Method: POST 
-Endpoint: users/login
-Payload:
+**Method:** POST 
+**Endpoint:** /users/login
+
+**Payload:**
+```json
 {
     "email": "gean@gmail.com",
     "password": "gean1234"
 }
-
+```
 **Response:**
+```json
 {
     "status": "success",
     "token": "your_jwt_token"
 }
-
+```
 View all users in the system
-Method: GET
-Endpoint: /users/displayAll
-Payload:
+**Method:** GET
+**Endpoint:** /users/displayAll
+
+**Payload:**
+```json
 {
     "token": "your_jwt_token"
 }
-
+```
 Response:
+```json
 {
     "status": "success",
     "new_token": "new_jwt_token",
@@ -67,7 +75,7 @@ Response:
         }
     ]
 }
-
+```
 ### Book Endpoints 📚
 Add a new book
 Method: POST
