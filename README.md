@@ -14,11 +14,12 @@ The Library Management System API is built using the SLIM Framework to create li
 ## Endpoints🚀
 
 ### User Endpoints 👤
+
 Register a new user
 **Method:** POST  
 **Endpoint:** `/users/register`  
 **Payload:**
-```json
+
 {
     "email": "gean@gmail.com",
     "username": "Geannele",
