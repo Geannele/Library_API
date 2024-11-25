@@ -3,6 +3,11 @@
 ## Overview 
 The Library Management System API is built using the SLIM Framework to create lightweight, RESTful endpoints. It’s a simple yet powerful example of how SLIM makes API development easy and efficient, providing a seamless way to manage resources like books, members, and transactions.
 
+## Table of Contents
+- [Key Features](#key-features)
+- [Installation Required](#installation-required)
+- [Endpoints](#endpoints)
+--------------------------------------------------------------------------------------------------------
 ## Key Features 
 ### 🔒 JWT Authentication 
 - Token-based user verification for secure API access. One-time token validity to enhance session security.
@@ -18,7 +23,7 @@ composer require firebase/php-jwt
 ```
 ## Endpoints🚀
 ----------------------------------------------------------------------------------------------------------
-### User Endpoints 👤
+## User Endpoints 👤
 ----------------------------------------------------------------------------------------------------------
 ### Register a new user
 - **Method:** `POST ` 
@@ -84,7 +89,7 @@ composer require firebase/php-jwt
 }
 ```
 ----------------------------------------------------------------------------------------------------------
-### Book Endpoints 📚
+## Book Endpoints 📚
 ----------------------------------------------------------------------------------------------------------
 
 ### Add a new book
@@ -263,7 +268,7 @@ composer require firebase/php-jwt
 }
 ```
 ----------------------------------------------------------------------------------------------------------
-### Author Endpoints ✍️
+## Author Endpoints ✍️
 ----------------------------------------------------------------------------------------------------------
 ### Add a new author
 - **Method:** `POST`
