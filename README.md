@@ -1,5 +1,5 @@
 # 📚 Library Management System API using SLIM Framework
-
+----------------------------------------------------------------------------------------------------------
 ## Overview 
 The Library Management System API is built using the SLIM Framework to create lightweight, RESTful endpoints. It’s a simple yet powerful example of how SLIM makes API development easy and efficient, providing a seamless way to manage resources like books, members, and transactions.
 
@@ -10,7 +10,11 @@ The Library Management System API is built using the SLIM Framework to create li
 - Search for books by genre, author, availability, or publication date.
 ### 📖 Comprehensive CRUD Operations
 - Add, update, delete, and view book records with search by title, author, or unique ID.
-
+### 1. Installation Required
+```
+composer require slim/slim:3.*
+composer require firebase/php-jwt
+```
 ## Endpoints🚀
 ----------------------------------------------------------------------------------------------------------
 ### User Endpoints 👤
@@ -19,7 +23,7 @@ The Library Management System API is built using the SLIM Framework to create li
 - **Method:** `POST ` 
 - **Endpoint:** `/users/register`  
 
--_**Payload:**_
+- _**Payload:**_
 ```json
 {
     "email": "gean@gmail.com",
@@ -39,14 +43,14 @@ The Library Management System API is built using the SLIM Framework to create li
 - **Method:** `POST`
 - **Endpoint:** `/users/login`
 
-- **Payload:**
+- _**Payload:**_
 ```json
 {
     "email": "gean@gmail.com",
     "password": "gean1234"
 }
 ```
-- **Response:**
+- _**Response:**_
 ```json
 {
     "status": "success",
@@ -58,13 +62,13 @@ The Library Management System API is built using the SLIM Framework to create li
 - **Method:** `GET`
 - **Endpoint:** `/users/displayAll`
 
-- **Payload:**
+- _**Payload:**_
 ```json
 {
     "token": "your_jwt_token"
 }
 ```
-- **Response:**
+- _**Response:**_
 ```json
 {
     "status": "success",
@@ -80,6 +84,7 @@ The Library Management System API is built using the SLIM Framework to create li
 ```
 ----------------------------------------------------------------------------------------------------------
 ### Book Endpoints 📚
+----------------------------------------------------------------------------------------------------------
 
 ### Add a new book
 - **Method:** `POST`
@@ -258,7 +263,7 @@ The Library Management System API is built using the SLIM Framework to create li
 ```
 ----------------------------------------------------------------------------------------------------------
 ### Author Endpoints ✍️
-
+----------------------------------------------------------------------------------------------------------
 ### Add a new author
 - **Method:** `POST`
 - **Endpoint:** `/authors/add`
