@@ -10,7 +10,8 @@ The Library Management System API is built using the SLIM Framework to create li
 - Search for books by genre, author, availability, or publication date.
 ### 📖 Comprehensive CRUD Operations
 - Add, update, delete, and view book records with search by title, author, or unique ID.
-### 1. Installation Required
+--------------------------------------------------------------------------------------------------------
+## Installation Required
 ```
 composer require slim/slim:3.*
 composer require firebase/php-jwt
