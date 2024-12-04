@@ -139,14 +139,14 @@ composer require firebase/php-jwt
 - **Method:** `DELETE`
 - **Endpoint:** `/books/delete`
 - **Payload:**
- ```
+``` json
 {
     "bookCode": "bookCode",
     "token": "your_jwt_token"
 }
 ```
 - **Response:** 
-```
+``` json
 {
     "status": "success",
     "new_token": "new_jwt_token"
@@ -158,13 +158,13 @@ composer require firebase/php-jwt
 - **Endpoint:** `/books/displayAll`
 
 - **Payload:**
-```
+``` json
 {
     "token": "yout_jwt_token"
 }
 ```
 - **Response:**
-```
+``` json
 {
     "status": "success",
     "new_token": "new_jwt_token",
@@ -186,14 +186,14 @@ composer require firebase/php-jwt
 - **Endpoint:** `/books/displayauthorsbooks`
 
 - **Payload:**
-```
+``` json
 {
     "token": "your_jwt_token",
     "authorname": "author_name"
 }
 ```
 - **Response:**
-```
+``` json
 {
     "status": "success",
     "new_token": "new_jwt_token",
@@ -215,14 +215,14 @@ composer require firebase/php-jwt
 - **Endpoint:** `/books/displaytitlebooks`
 
 - **Payload:**
-```
+``` json
 {
     "token": "your_jwt_token",
     "booktitle": "book_title"
 }
 ```
 - **Response:**
-```
+``` json
 {
     "status": "success",
     "new_token": "new_jwt_token",
@@ -244,14 +244,14 @@ composer require firebase/php-jwt
 - **Endpoint:** `/books/displaygenrebooks`
 
 - **Payload:**
-```
+``` json
 {
     "token": "your_jwt_token",
     "bookgenre": "book_genre"
 }
 ```
 - **Response:**
-```
+``` json
 {
     "status": "success",
     "new_token": "new_jwt_token",
@@ -275,14 +275,14 @@ composer require firebase/php-jwt
 - **Endpoint:** `/authors/add`
 
 - **Payload:**
-```
+``` json
 {
     "authorname": "author_name",
     "token": "your_jwt_token"
 }
 ```
 - **Response:**
-```
+``` json
 {
     "status": "success",
     "new_token": "new_jwt_token"
@@ -294,7 +294,7 @@ composer require firebase/php-jwt
 - **Endpoint:** /authors/update
 
 - **Payload:**
-```
+``` json
 {
     "authorid": "author_id",
     "authorname": "author_name",
@@ -302,7 +302,7 @@ composer require firebase/php-jwt
 }
 ```
 - **Response:**
-```
+``` json
 {
     "status": "success",
     "new_token": "new_jwt_token"
@@ -314,14 +314,14 @@ composer require firebase/php-jwt
 - **Endpoint:** `/authors/delete`
 
 - **Payload:**
-```
+``` json
 {
     "authorid": "author_name",
     "token": "new_jwt_token"
 }
 ```
 - **Response:**
-```
+``` json
 {
     "status": "success",
     "new_token": "new_jwt_token"
@@ -333,13 +333,13 @@ composer require firebase/php-jwt
 - **Endpoint:** `/authors/display`
 
 - **Payload:**
-```
+``` json
 {
     "token": "your_jwt_token"
 }
 ```
 - **Response:**
-```
+``` json
 {
     "status": "success",
     "new_token": "new_jwt_token",
